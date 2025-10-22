@@ -6,34 +6,34 @@ const Projects = () => {
   const projects = [
     {
       title: "Saudi Vision 2030 Project Progress Analysis",
-      description: "Monitored 15+ national projects across sectors; visualized 66% on-track progress. Highlighted budget utilization and sector-level risk areas.",
+      description: "Monitored 15+ national projects across sectors; visualized on-track progress. Highlighted budget utilization and sector-level risk areas.",
       icon: TrendingUp,
       tools: ["Tableau", "Data Visualization", "KPI Tracking"],
-      insights: "66% projects on track | Budget efficiency analysis",
+      insights: "<b>66%</b> projects on track | Budget efficiency analysis",
       color: "from-cyan-500 to-blue-500"
     },
     {
       title: "Healthcare Provider Billing & Cost Analysis",
-      description: "Modeled patient billing data and built financial dashboards identifying cost drivers. Found 50% out-of-pocket payments and trends by department.",
+      description: "Modeled patient billing data and built financial dashboards identifying cost drivers. Revealed payment trends by department.",
       icon: BarChart,
       tools: ["Power BI", "Financial Modeling", "SQL"],
-      insights: "50% OOP payments | Department-wise cost trends",
+      insights: "<b>50%</b> out-of-pocket payments | Department cost trends",
       color: "from-blue-500 to-indigo-500"
     },
     {
       title: "E-commerce Customer Sales Analysis",
-      description: "Cleaned 30K+ sales records; revealed top-performing categories and revenue insights. Supported marketing spend optimization through campaign analysis.",
+      description: "Cleaned sales records revealing top-performing categories and revenue insights. Supported marketing spend optimization through campaign analysis.",
       icon: ShoppingCart,
       tools: ["SQL", "Python", "Dashboard Design"],
-      insights: "30K+ records analyzed | Revenue optimization",
+      insights: "<b>30K+</b> records analyzed | Revenue optimization",
       color: "from-teal-500 to-cyan-500"
     },
     {
       title: "HR Attrition Analysis",
-      description: "Identified high-risk age group and major attrition causes like salary stagnation. Delivered actionable retention insights via an interactive Excel dashboard.",
+      description: "Identified high-risk age group and major attrition causes like salary stagnation. Delivered actionable retention insights via interactive dashboard.",
       icon: Users,
       tools: ["Excel", "Statistical Analysis", "HR Analytics"],
-      insights: "Retention recommendations | Interactive dashboard",
+      insights: "Retention strategies | <b>Interactive</b> dashboard",
       color: "from-indigo-500 to-purple-500"
     }
   ];
@@ -77,9 +77,7 @@ const Projects = () => {
                 </p>
 
                 <div className="bg-muted/30 rounded-lg p-3 mb-4 border border-primary/10">
-                  <p className="text-sm font-semibold text-primary">
-                    {project.insights}
-                  </p>
+                  <p className="text-sm font-semibold text-primary" dangerouslySetInnerHTML={{ __html: project.insights }} />
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">

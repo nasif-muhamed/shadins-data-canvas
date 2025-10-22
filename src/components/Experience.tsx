@@ -3,10 +3,10 @@ import { Building2, Calendar } from "lucide-react";
 
 const Experience = () => {
   const achievements = [
-    "Evaluated 30K+ e-commerce sales records to identify top-performing products and revenue channels",
-    "Designed dashboards for healthcare visit trends and patient retention analysis",
-    "Assessed Saudi Vision 2030 project portfolio performance and funding efficiency",
-    "Conducted HR attrition analysis with actionable recommendations for retention improvement"
+    "Evaluated <b>30K+</b> e-commerce sales records, identifying top-performing products and optimizing revenue channels",
+    "Designed healthcare dashboards revealing <b>57%</b> male patient visits, enabling targeted outreach strategies",
+    "Assessed Saudi Vision 2030 portfolio showing <b>66%</b> of projects on track with budget efficiency insights",
+    "Delivered HR attrition analysis identifying high-risk groups, providing actionable retention recommendations"
   ];
 
   return (
@@ -54,9 +54,7 @@ const Experience = () => {
                       <div className="flex-shrink-0 mt-1.5">
                         <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-300"></div>
                       </div>
-                      <p className="text-foreground leading-relaxed group-hover:text-primary transition-colors">
-                        {achievement}
-                      </p>
+                      <p className="text-foreground leading-relaxed group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: achievement }} />
                     </div>
                   ))}
                 </div>

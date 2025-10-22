@@ -90,8 +90,8 @@ const Hero = () => {
                 className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/30 shadow-2xl"
               />
               <div className="absolute -bottom-4 -right-4 bg-card px-6 py-3 rounded-full shadow-card border border-primary/20">
-                <p className="text-primary font-bold text-lg">8+ Years</p>
-                <p className="text-xs text-muted-foreground">Experience</p>
+                <p className="text-primary font-bold text-lg">Fresh Graduate</p>
+                <p className="text-xs text-muted-foreground">Data Analyst</p>
               </div>
             </div>
           </div>
