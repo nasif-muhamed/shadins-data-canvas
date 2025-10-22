@@ -1,86 +1,66 @@
-import { Card } from "@/components/ui/card";
-import { Code2, Database, BarChart3, Brain, Users, Lightbulb } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Eraser, Database, BarChart3, LineChart, Palette, Zap } from "lucide-react";
 
 const Skills = () => {
-  const skillCategories = [
+  const skills = [
     {
-      title: "Programming & Tools",
-      icon: Code2,
-      skills: ["Python (Pandas, NumPy)", "SQL (PostgreSQL, MySQL)", "Excel (Advanced)", "Git", "Scikit-learn", "XGBoost"],
-      color: "from-cyan-500 to-blue-500"
+      icon: Eraser,
+      title: "Data Cleaning",
+      description: "Ensuring data accuracy and readiness by transforming raw data into clean and structured formats."
     },
     {
-      title: "Data Visualization",
-      icon: BarChart3,
-      skills: ["Tableau", "Power BI", "Matplotlib", "Seaborn", "Interactive Dashboards"],
-      color: "from-teal-500 to-cyan-500"
-    },
-    {
-      title: "Statistical Analysis",
       icon: Database,
-      skills: ["Hypothesis Testing", "Regression Analysis", "Classification", "Predictive Modeling", "Feature Engineering"],
-      color: "from-blue-500 to-indigo-500"
+      title: "Data Modeling",
+      description: "Developing and implementing data models to represent and analyze complex data structures and relationships."
     },
     {
-      title: "Machine Learning",
-      icon: Brain,
-      skills: ["Supervised Learning", "Unsupervised Learning", "Model Evaluation", "Data Preprocessing"],
-      color: "from-indigo-500 to-purple-500"
+      icon: BarChart3,
+      title: "Data Analysis",
+      description: "Applying statistical techniques and analytical methods to draw meaningful conclusions and inform decision-making."
     },
     {
-      title: "Soft Skills",
-      icon: Users,
-      skills: ["Data Storytelling", "Communication", "Teamwork", "Critical Thinking", "Attention to Detail", "Adaptability"],
-      color: "from-purple-500 to-pink-500"
+      icon: LineChart,
+      title: "Data Visualization",
+      description: "Designing and creating dynamic visualizations to present data insights in an accessible and impactful way."
     },
     {
-      title: "Business Intelligence",
-      icon: Lightbulb,
-      skills: ["KPI Development", "Business Strategy", "Data-Driven Decision Making", "Stakeholder Management"],
-      color: "from-pink-500 to-rose-500"
+      icon: Palette,
+      title: "UI/UX Design",
+      description: "Creating intuitive and visually appealing user interfaces while enhancing user experience through research-driven design solutions."
+    },
+    {
+      icon: Zap,
+      title: "Automation",
+      description: "Enhancing efficiency by automating data processes and workflows, reducing manual effort and ensuring consistent results."
     }
   ];
 
   return (
-    <section id="skills" className="py-20 lg:py-32 bg-gradient-to-b from-background to-card/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Skills & Expertise
-          </h2>
-          <div className="w-20 h-1 bg-gradient-accent mx-auto mb-4"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for turning data into actionable insights
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => (
-            <Card 
-              key={category.title}
-              className="bg-card border-primary/20 p-6 hover:shadow-glow transition-all duration-300 hover:-translate-y-2 group animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${category.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <category.icon className="w-full h-full text-white" />
-              </div>
-              
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                {category.title}
-              </h3>
-              
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span 
-                    key={skill}
-                    className="px-3 py-1 bg-muted/50 rounded-full text-sm text-foreground border border-primary/10 hover:border-primary/30 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </Card>
-          ))}
+    <section id="skills" className="py-24 px-4 md:px-8 bg-secondary/30">
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">
+          What I Can Do
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skills.map((skill, index) => {
+            const Icon = skill.icon;
+            return (
+              <Card key={index} className="border-0 shadow-card hover:shadow-glow transition-shadow">
+                <CardContent className="p-8 text-center">
+                  <div className="mb-6 flex justify-center">
+                    <div className="p-4 rounded-full bg-primary/10">
+                      <Icon className="w-8 h-8" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{skill.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {skill.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
