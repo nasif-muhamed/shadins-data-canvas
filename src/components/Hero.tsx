@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4">
         <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-tight">
-          SHADIN K
+          Shadin k
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
           Data Analyst
