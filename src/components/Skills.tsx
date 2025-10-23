@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Eraser, Database, BarChart3, LineChart, Palette, Zap } from "lucide-react";
+import { Eraser, Database, BarChart3, LineChart, Brain, Lightbulb } from "lucide-react";
 
 const Skills = () => {
   const skills = [
@@ -24,14 +24,14 @@ const Skills = () => {
       description: "Designing and creating dynamic visualizations to present data insights in an accessible and impactful way."
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating intuitive and visually appealing user interfaces while enhancing user experience through research-driven design solutions."
+      icon: Brain,
+      title: "Predictive Modeling & ML",
+      description: "Developing and validating machine learning models (Classification, Regression) using Python (Scikit-learn, XGBoost) to forecast outcomes, identify key drivers, and solve complex business problems like customer attrition or sales prediction."
     },
     {
-      icon: Zap,
-      title: "Automation",
-      description: "Enhancing efficiency by automating data processes and workflows, reducing manual effort and ensuring consistent results."
+      icon: Lightbulb,
+      title: "Actionable Insights & Strategy",
+      description: "Translating complex data analysis into clear, compelling narratives and actionable recommendations for stakeholders, driving data-driven policy monitoring (like your Saudi Vision 2030 project) and business strategies."
     }
   ];
 
