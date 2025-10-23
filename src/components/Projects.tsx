@@ -3,28 +3,60 @@ import { Card, CardContent } from "@/components/ui/card";
 const Projects = () => {
   const projects = [
     {
-      title: "Saudi Vision 2030 Project Progress Analysis",
-      tool: "Tableau",
-      description: "Monitored 15+ national projects across sectors; visualized <b>66%</b> on-track progress. Highlighted budget utilization and sector-level risk areas.",
-      image: "/placeholder.svg"
-    },
-    {
-      title: "Healthcare Provider Billing & Cost Analysis",
+      title: "Property Management Analysis",
       tool: "Power BI",
-      description: "Modeled patient billing data and built financial dashboards identifying cost drivers. Found <b>50%</b> out-of-pocket payments and trends by department.",
-      image: "/placeholder.svg"
+      description: "Comprehensive BI dashboard analyzing multi-national property management operations. Tracked financial performance, sales channels, and client demographics across global markets to drive data-driven strategic planning.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/Property-management-analysis-power-bi-/blob/main/README.md"
     },
     {
-      title: "E-commerce Customer Sales Analysis",
-      tool: "SQL + Dashboard",
-      description: "Cleaned <b>30K+</b> sales records; revealed top-performing categories and revenue insights. Supported marketing spend optimization through campaign analysis.",
-      image: "/placeholder.svg"
+      title: "Healthcare Analysis",
+      tool: "Power BI",
+      description: "Hospital performance dashboard providing insights into patient demographics, treatment effectiveness, and resource utilization. Analyzed emergency visits, discharge rates, and revenue metrics across departments.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/Healthcare-Analysis-power-bi-/blob/main/README.md"
+    },
+    {
+      title: "Saudi Vision 2030 Analysis",
+      tool: "Tableau",
+      description: "Interactive dashboard monitoring 15+ national Vision 2030 initiatives. Provided real-time visibility into project status, spending trends, and risk factors to enable data-driven governance and strategic alignment.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/tableau-project/blob/main/README.md"
     },
     {
       title: "HR Attrition Analysis",
       tool: "Excel",
-      description: "Identified high-risk age group and major attrition causes like salary stagnation. Delivered actionable retention insights via an interactive Excel dashboard.",
-      image: "/placeholder.svg"
+      description: "Dynamic Excel dashboard analyzing employee turnover across job roles, departments, and demographics. Identified key attrition drivers and provided actionable insights for improving retention and workforce stability.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/Hr-Attrition-Analysis-excel-dashboard-/blob/main/README.md"
+    },
+    {
+      title: "E-commerce Sales Analysis",
+      tool: "SQL",
+      description: "Complete data pipeline transforming <b>30K+</b> e-commerce records into a normalized 3NF database. Performed advanced analytical queries revealing top products, customer behavior patterns, and marketing campaign performance.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/SQL-PROJECT/blob/main/README.md"
+    },
+    {
+      title: "Airbnb Analysis",
+      tool: "Python (EDA)",
+      description: "Exploratory data analysis of 20,765 New York Airbnb listings using Pandas, Numpy, Matplotlib, and Seaborn. Uncovered pricing trends, room type distribution, and neighborhood patterns to provide insights for guests and hosts.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/Airbnb-analysis-Python-EDA-/blob/main/README.md"
+    },
+    {
+      title: "Medical Insurance Prediction",
+      tool: "Python (ML)",
+      description: "End-to-end machine learning project predicting insurance premiums based on demographics and health factors. Built and compared regression models, achieving high accuracy through feature engineering and model optimization.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/Medical-insurance-prediction-PYTHON-/blob/main/README.md"
+    },
+    {
+      title: "Web Scraping Project",
+      tool: "Python (BeautifulSoup)",
+      description: "Market intelligence pipeline scraping Flipkart mobile data across 10 pages. Performed ETL, data cleaning, and visualization to analyze pricing trends, customer ratings, and competitive positioning in the e-commerce sector.",
+      image: "/placeholder.svg",
+      link: "https://github.com/Shaadink/web-scrapping-project-using-python/blob/main/README.md"
     }
   ];
 
@@ -37,25 +69,33 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="border-0 shadow-card hover:shadow-glow transition-shadow group overflow-hidden">
-              <div className="aspect-video bg-muted overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-8">
-                <div className="mb-2">
-                  <span className="text-sm font-semibold text-primary">{project.tool}</span>
+            <a 
+              key={index} 
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="border-0 shadow-card hover:shadow-glow transition-all group overflow-hidden h-full">
+                <div className="aspect-video bg-muted overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                <p 
-                  className="text-muted-foreground leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: project.description }}
-                />
-              </CardContent>
-            </Card>
+                <CardContent className="p-8">
+                  <div className="mb-2">
+                    <span className="text-sm font-semibold text-primary">{project.tool}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{project.title}</h3>
+                  <p 
+                    className="text-muted-foreground leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                  />
+                </CardContent>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
