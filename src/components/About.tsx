@@ -1,85 +1,61 @@
-import { GraduationCap, Briefcase, Award } from "lucide-react";
-import { Card } from "@/components/ui/card";
 
 const About = () => {
   return (
     <section id="about" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            About Me
-          </h2>
-          <div className="w-20 h-1 bg-gradient-accent mx-auto"></div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-fade-in">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate Data Analyst with expertise in transforming raw data into meaningful 
-              insights that drive business decisions. With a strong foundation in statistics and 
-              hands-on experience in Python, SQL, and modern BI tools, I specialize in building 
-              interactive dashboards and applying machine learning techniques to solve complex 
-              business challenges.
-            </p>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              My approach combines technical proficiency with business acumen, ensuring that data 
-              analysis translates into actionable strategies. I excel at identifying trends, 
-              visualizing large datasets, and communicating insights effectively to stakeholders.
-            </p>
-
-            <div className="bg-card p-6 rounded-lg border border-primary/20">
-              <p className="text-primary font-semibold italic text-lg">
-                "I believe data tells stories — my job is to translate them into business impact."
-              </p>
-            </div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          {/* Left Column - Large Heading */}
+          <div className="animate-fade-in">
+            <h2 className="text-5xl lg:text-7xl font-bold text-foreground">
+              About Me
+            </h2>
           </div>
 
-          <div className="grid gap-6 animate-fade-in-up">
-            <Card className="bg-card border-primary/20 p-6 hover:shadow-glow transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Education</h3>
-                  <p className="text-muted-foreground">
-                    <span className="font-semibold text-foreground">B.Sc. (Honours) in Statistics</span>
-                  </p>
-                  <p className="text-sm text-muted-foreground">Class of 2024</p>
-                </div>
-              </div>
-            </Card>
+          {/* Right Column - Content */}
+          <div className="space-y-6 animate-fade-in">
+            <p className="text-lg text-foreground leading-relaxed">
+              <span className="font-semibold">Hi there, I'm Shadin K!</span>
+            </p>
+            
+            <p className="text-lg text-foreground leading-relaxed">
+              Ever wondered how raw data can become a powerful story? That's where I come in. As a passionate data analyst, I turn complex data into clear, actionable insights that drive strategic decisions. With expertise in <span className="font-semibold">statistical analysis</span>, <span className="font-semibold">data visualization</span>, and <span className="font-semibold">business intelligence</span>, I specialize in uncovering hidden patterns, crafting dynamic dashboards, and delivering recommendations that empower organizations to thrive.
+            </p>
 
-            <Card className="bg-card border-primary/20 p-6 hover:shadow-glow transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Experience</h3>
-                  <p className="text-muted-foreground">
-                    <span className="font-semibold text-foreground">Data Analyst</span> at Bridgeon Solutions
-                  </p>
-                  <p className="text-sm text-muted-foreground">April 2025 - Present</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="bg-card border-primary/20 p-6 hover:shadow-glow transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Expertise</h3>
-                  <p className="text-muted-foreground">
-                    Machine Learning, Statistical Analysis, Business Intelligence, 
-                    Data Storytelling & Visualization
-                  </p>
-                </div>
-              </div>
-            </Card>
+            {/* Social Icons */}
+            <div className="flex gap-4 pt-4">
+              <a 
+                href="mailto:your.email@example.com" 
+                className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
+                aria-label="Email"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </a>
+              <a 
+                href="https://github.com/yourusername" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
+                aria-label="GitHub"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                </svg>
+              </a>
+              <a 
+                href="https://linkedin.com/in/yourusername" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
+                aria-label="LinkedIn"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

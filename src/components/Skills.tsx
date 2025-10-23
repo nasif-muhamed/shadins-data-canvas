@@ -36,9 +36,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 px-4 md:px-8 bg-secondary/30">
+    <section id="skills" className="py-24 px-4 md:px-8 bg-foreground">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 text-background">
           What I Can Do
         </h2>
         
@@ -46,15 +46,15 @@ const Skills = () => {
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
-              <Card key={index} className="border-0 shadow-card hover:shadow-glow transition-shadow">
+              <Card key={index} className="border-0 shadow-card hover:shadow-glow transition-shadow bg-foreground">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
-                    <div className="p-4 rounded-full bg-primary/10">
-                      <Icon className="w-8 h-8" />
+                    <div className="p-4 rounded-full bg-background/10">
+                      <Icon className="w-8 h-8 text-background" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">{skill.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-xl font-semibold mb-4 text-background">{skill.title}</h3>
+                  <p className="text-background/80 leading-relaxed">
                     {skill.description}
                   </p>
                 </CardContent>
