@@ -1,12 +1,18 @@
 
 const About = () => {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 lg:py-32 bg-gradient-subtle relative overflow-hidden">
+      {/* Background particles effect */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left Column - Large Heading */}
           <div className="animate-fade-in">
-            <h2 className="text-5xl lg:text-7xl font-bold text-foreground">
+            <h2 className="text-5xl lg:text-8xl font-display font-bold text-transparent bg-gradient-accent bg-clip-text">
               About Me
             </h2>
           </div>

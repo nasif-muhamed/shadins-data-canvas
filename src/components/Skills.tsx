@@ -36,9 +36,15 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 px-4 md:px-8 bg-foreground">
-      <div className="container mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 text-background">
+    <section id="skills" className="py-24 px-4 md:px-8 bg-gradient-card relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-40 right-20 w-80 h-80 bg-accent/40 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-40 left-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+      </div>
+      
+      <div className="container mx-auto relative z-10">
+        <h2 className="text-4xl md:text-7xl font-display font-bold text-center mb-16 bg-gradient-hero bg-clip-text text-transparent">
           What I Can Do
         </h2>
         
@@ -46,15 +52,15 @@ const Skills = () => {
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
-              <Card key={index} className="border-0 shadow-card hover:shadow-glow transition-shadow bg-foreground">
+              <Card key={index} className="border border-primary/20 shadow-elegant hover:shadow-glow transition-all duration-500 bg-gradient-card hover:scale-105 group">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
-                    <div className="p-4 rounded-full bg-background/10">
+                    <div className="p-4 rounded-full bg-gradient-hero group-hover:scale-110 transition-transform duration-500">
                       <Icon className="w-8 h-8 text-background" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-background">{skill.title}</h3>
-                  <p className="text-background/80 leading-relaxed">
+                  <h3 className="text-xl font-display font-semibold mb-4 text-foreground">{skill.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     {skill.description}
                   </p>
                 </CardContent>
