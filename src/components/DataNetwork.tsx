@@ -20,16 +20,16 @@ const DataNetwork = () => {
 
     // Network nodes
     const nodes: { x: number; y: number; vx: number; vy: number }[] = [];
-    const nodeCount = 120;
-    const maxDistance = 180;
+    const nodeCount = 80;
+    const maxDistance = 150;
 
     // Create nodes
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 1.2,
-        vy: (Math.random() - 0.5) * 1.2,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
       });
     }
 
@@ -47,28 +47,21 @@ const DataNetwork = () => {
         if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
         if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
 
-        // Draw node with glow
-        const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, 4);
-        gradient.addColorStop(0, 'rgba(138, 80, 252, 0.9)');
-        gradient.addColorStop(1, 'rgba(59, 130, 246, 0.3)');
-        ctx.fillStyle = gradient;
+        // Draw node
+        ctx.fillStyle = 'rgba(150, 150, 150, 0.5)';
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
         ctx.fill();
 
-        // Draw connections with gradient
+        // Draw connections
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[j].x - node.x;
           const dy = nodes[j].y - node.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const lineGradient = ctx.createLinearGradient(node.x, node.y, nodes[j].x, nodes[j].y);
-            const opacity = 0.4 * (1 - distance / maxDistance);
-            lineGradient.addColorStop(0, `rgba(138, 80, 252, ${opacity})`);
-            lineGradient.addColorStop(1, `rgba(59, 130, 246, ${opacity})`);
-            ctx.strokeStyle = lineGradient;
-            ctx.lineWidth = 1.5;
+            ctx.strokeStyle = `rgba(180, 180, 180, ${0.2 * (1 - distance / maxDistance)})`;
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -76,11 +69,11 @@ const DataNetwork = () => {
           }
         }
 
-        // Add numbers near some nodes with better visibility
+        // Add numbers near some nodes
         if (i % 8 === 0) {
-          ctx.fillStyle = 'rgba(138, 80, 252, 0.5)';
-          ctx.font = 'bold 13px Poppins';
-          ctx.fillText(Math.floor(Math.random() * 1000000).toString(), node.x + 12, node.y);
+          ctx.fillStyle = 'rgba(120, 120, 120, 0.3)';
+          ctx.font = '12px Inter';
+          ctx.fillText(Math.floor(Math.random() * 1000000).toString(), node.x + 10, node.y);
         }
       });
 

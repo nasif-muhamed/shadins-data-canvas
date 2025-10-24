@@ -69,15 +69,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 px-4 md:px-8 bg-background relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-primary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-      </div>
-      
-      <div className="container mx-auto relative z-10">
-        <h2 className="text-4xl md:text-7xl font-display font-bold mb-16 bg-gradient-accent bg-clip-text text-transparent">
+    <section id="projects" className="py-24 px-4 md:px-8 bg-secondary/30">
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-6xl font-bold mb-16">
           Featured Projects
         </h2>
         
@@ -90,20 +84,19 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <Card className="border border-primary/20 shadow-elegant hover:shadow-glow transition-all duration-500 group overflow-hidden h-full bg-gradient-card hover:scale-105">
-                <div className="aspect-video bg-muted overflow-hidden relative">
+              <Card className="border-0 shadow-card hover:shadow-glow transition-all group overflow-hidden h-full">
+                <div className="aspect-video bg-muted overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <CardContent className="p-8">
                   <div className="mb-2">
-                    <span className="text-sm font-semibold text-primary px-3 py-1 bg-primary/10 rounded-full">{project.tool}</span>
+                    <span className="text-sm font-semibold text-primary">{project.tool}</span>
                   </div>
-                  <h3 className="text-2xl font-display font-bold mb-4 group-hover:text-primary transition-colors text-foreground">{project.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{project.title}</h3>
                   <p 
                     className="text-muted-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: project.description }}

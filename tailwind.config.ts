@@ -51,13 +51,10 @@ export default {
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-accent': 'var(--gradient-accent)',
-        'gradient-card': 'var(--gradient-card)',
-        'gradient-subtle': 'var(--gradient-subtle)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
         'card': 'var(--shadow-card)',
-        'elegant': 'var(--shadow-elegant)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,8 +62,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

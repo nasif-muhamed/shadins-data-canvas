@@ -13,11 +13,11 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-xl z-50 border-b border-primary/20 shadow-glow">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="text-xl font-display font-bold bg-gradient-hero bg-clip-text text-transparent hover:scale-105 transition-transform">
+          <a href="#home" className="text-xl font-bold">
             SHADIN K
           </a>
 
@@ -27,7 +27,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-hero after:transition-all after:duration-300 hover:after:w-full"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {item.label}
               </a>
@@ -45,12 +45,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-primary/20 bg-gradient-card">
+          <div className="md:hidden py-4 border-t">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-3 text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 hover:translate-x-2"
+                className="block py-3 text-sm font-medium hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
