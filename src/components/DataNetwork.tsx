@@ -48,7 +48,7 @@ const DataNetwork = () => {
         if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
 
         // Draw node
-        ctx.fillStyle = 'rgba(150, 150, 150, 0.5)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
         ctx.beginPath();
         ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
         ctx.fill();
@@ -60,7 +60,7 @@ const DataNetwork = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            ctx.strokeStyle = `rgba(180, 180, 180, ${0.2 * (1 - distance / maxDistance)})`;
+            ctx.strokeStyle = `rgba(0, 0, 0, ${0.3 * (1 - distance / maxDistance)})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
@@ -71,7 +71,7 @@ const DataNetwork = () => {
 
         // Add numbers near some nodes
         if (i % 8 === 0) {
-          ctx.fillStyle = 'rgba(120, 120, 120, 0.3)';
+          ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
           ctx.font = '12px Inter';
           ctx.fillText(Math.floor(Math.random() * 1000000).toString(), node.x + 10, node.y);
         }

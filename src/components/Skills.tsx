@@ -46,7 +46,7 @@ const Skills = () => {
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
-              <Card key={index} className="border-0 shadow-card hover:shadow-glow transition-shadow bg-foreground">
+              <Card key={index} className="shadow-card bg-foreground hover:bg-primary">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
                     <div className="p-4 rounded-full bg-background/10">

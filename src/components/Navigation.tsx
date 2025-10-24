@@ -13,9 +13,9 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8">
+      <div className={`max-w-6xl mx-auto bg-background/80 backdrop-blur-md border shadow-lg ${!isOpen && 'rounded-full'}`}>
+        <div className="flex items-center justify-between h-16 px-6">
           {/* Logo */}
           <a href="#home" className="text-xl font-bold">
             SHADIN K
@@ -45,7 +45,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden pb-4 px-6 border-t">
             {navItems.map((item) => (
               <a
                 key={item.label}

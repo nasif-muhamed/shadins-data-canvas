@@ -14,7 +14,9 @@ const Services = () => {
               I help businesses transform raw data into meaningful insights through analysis, visualization, and predictive modeling. From data cleaning to dashboard creation, I deliver clear, actionable results.
             </p>
             <Button size="lg" className="rounded-full px-8">
-              Hire Me
+              <a href="mailto:shadink.work@gmail.com" target="_blank" rel="noopener noreferrer">
+                Hire Me
+              </a>
             </Button>
           </CardContent>
         </Card>

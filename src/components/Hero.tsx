@@ -13,24 +13,24 @@ const Hero = () => {
         <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-tight">
           Shadin k
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
+        <p className="text-xl md:text-2xl mb-8 text-foreground/70">
           Data Analyst
         </p>
         <Button 
           variant="default" 
           size="lg"
-          className="rounded-full px-8"
+          className="animate-pulse rounded-full px-8"
           asChild
         >
-          <a href="https://drive.google.com/file/d/1fHOojSHNG70lYBqFYl-s78fYMmaDNsq0/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </Button>
         
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-muted-foreground" />
-        </div>
+      </div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-12 animate-bounce">
+        <ChevronDown className="w-8 h-8 text-muted-foreground" />
       </div>
     </section>
   );
