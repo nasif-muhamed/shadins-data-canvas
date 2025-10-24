@@ -20,8 +20,11 @@ const Hero = () => {
           variant="default" 
           size="lg"
           className="rounded-full px-8"
+          asChild
         >
-          Resume
+          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
         </Button>
         
         {/* Scroll Indicator */}

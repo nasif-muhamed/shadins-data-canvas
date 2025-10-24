@@ -24,7 +24,7 @@ const About = () => {
             {/* Social Icons */}
             <div className="flex gap-4 pt-4">
               <a 
-                href="mailto:your.email@example.com" 
+                href="mailto:shadink.work@gmail.com" 
                 className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
                 aria-label="Email"
               >
@@ -34,7 +34,7 @@ const About = () => {
                 </svg>
               </a>
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/Shaadink" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -45,7 +45,7 @@ const About = () => {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/shadin-karangadan/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"

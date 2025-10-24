@@ -38,7 +38,7 @@ const Contact = () => {
 
         <div className="flex justify-center gap-6">
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/shadin-karangadan/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-4 rounded-full bg-card hover:bg-accent transition-colors shadow-card"
@@ -46,7 +46,7 @@ const Contact = () => {
             <Linkedin className="w-6 h-6" />
           </a>
           <a 
-            href="https://github.com" 
+            href="https://github.com/Shaadink" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-4 rounded-full bg-card hover:bg-accent transition-colors shadow-card"
@@ -54,7 +54,7 @@ const Contact = () => {
             <Github className="w-6 h-6" />
           </a>
           <a 
-            href="mailto:shadin@example.com"
+            href="mailto:shadink.work@gmail.com"
             className="p-4 rounded-full bg-card hover:bg-accent transition-colors shadow-card"
           >
             <Mail className="w-6 h-6" />
