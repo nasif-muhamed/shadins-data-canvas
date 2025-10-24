@@ -22,7 +22,7 @@ const Hero = () => {
           className="rounded-full px-8"
           asChild
         >
-          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1fHOojSHNG70lYBqFYl-s78fYMmaDNsq0/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </Button>
